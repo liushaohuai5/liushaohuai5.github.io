@@ -29,6 +29,7 @@ Skills
   * c/c++
   * Matlab
 * Soccer
+  * Former player of Tsinghua Men's Soccer Team, Midfield. 
 
 Publications
 ======
