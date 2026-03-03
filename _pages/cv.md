@@ -17,10 +17,15 @@ Education
 
 Work experience
 ======
-* Spring 2024: Research Assistant
+* Summer 2022: AI Engineer
+  * JD.com
+  * Search and Recommendation
+* Spring 2024: Research Assistant (Gap year)
   * Tsinghua University
   * Duties included: Reinforcement learning research
   * Supervisor: Professor Yang Gao
+* Summer 2026: Applied Scientist Intern
+  * Amazon
   
 Skills
 ======
@@ -29,7 +34,8 @@ Skills
   * c/c++
   * Matlab
 * Soccer
-  * Former player of Tsinghua Men's Soccer Team, Midfield. 
+  * National 2nd level athlete
+
 
 Publications
 ======
@@ -37,18 +43,29 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+[//]: # (Talks)
+
+[//]: # (======)
+
+[//]: # (  <ul>{% for post in site.talks %})
+
+[//]: # (    {% include archive-single-talk-cv.html %})
+
+[//]: # (  {% endfor %}</ul>)
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+[//]: # (Teaching)
+
+[//]: # (======)
+
+[//]: # (  <ul>{% for post in site.teaching %})
+
+[//]: # (    {% include archive-single-cv.html %})
+
+[//]: # (  {% endfor %}</ul>)
   
 Service and leadership
 ======
-* 
+* Player for Tsinghua Men's Soccer Team (2016-2023)
+* Captain of Tsinghua EEA Soccer Team (2016-2020)
+* Captain of Tsinghua IIIS Soccer Team (2021-2022)
+* Captain of Changsha YALI High School Soccer Team (2014-2015)
