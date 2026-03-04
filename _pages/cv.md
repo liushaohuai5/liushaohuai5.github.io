@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in Electrical Engineering, Department of Electrical Engineering, Tsinghua University, 2020
-* M.S. in Computer Science, Institute for Interdisciplinary Information Science (IIIS), GitHub University, 2023
-* Ph.D in Electrical Engineering, Texas A&M University, 2029 (expected)
+* B.S. in Electrical Engineering, Department of Electrical Engineering, Tsinghua University, 2016-2020
+* M.S. in Computer Science, Institute for Interdisciplinary Information Science (IIIS), Tsinghua University, 2020-2023
+* Ph.D in Electrical Engineering, Texas A&M University, 2024-
 
 Work experience
 ======
@@ -42,26 +42,6 @@ Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-[//]: # (Talks)
-
-[//]: # (======)
-
-[//]: # (  <ul>{% for post in site.talks %})
-
-[//]: # (    {% include archive-single-talk-cv.html %})
-
-[//]: # (  {% endfor %}</ul>)
-  
-[//]: # (Teaching)
-
-[//]: # (======)
-
-[//]: # (  <ul>{% for post in site.teaching %})
-
-[//]: # (    {% include archive-single-cv.html %})
-
-[//]: # (  {% endfor %}</ul>)
   
 Service and leadership
 ======
