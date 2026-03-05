@@ -12,8 +12,8 @@ Reinforcement learning has achieved great success in many applications. However,
 
 [Download paper here](https://arxiv.org/pdf/2111.00210)
 
-BibTex:
-'''
+## BibTex:
+```
 @article{ye2021mastering,
   title={Mastering atari games with limited data},
   author={Ye, Weirui and Liu, Shaohuai and Kurutach, Thanard and Abbeel, Pieter and Gao, Yang},
@@ -22,5 +22,5 @@ BibTex:
   pages={25476--25488},
   year={2021}
 }
-'''
+```
 

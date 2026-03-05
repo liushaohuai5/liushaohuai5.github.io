@@ -9,6 +9,18 @@ venue: 'Electric Power Systems Research'
 #citation: 'Liu, S., Liu, J., Yang, N., Huang, Y., Jiang, Q., & Gao, Y. (2024). Real-time power scheduling through reinforcement learning from demonstrations. Electric Power Systems Research, 235, 110638.'
 ---
 Real-time decision-making in power system scheduling is imperative in response to the increasing integration of renewable energy. This paper proposes a novel framework leveraging Reinforcement Learning from Demonstration (RLfD) to address complex unit commitment (UC) and optimal power flow (OPF) challenges, called GridZero-Imitation (GZ-I). Unlike traditional RL approaches that require complex reward function designs and have limited performance insurance, our method employs intuitive rewards and expert demonstrations to regularize the RL training. The demonstrations can be collected from asynchronous reanalysis of an expert solver, enabling RL to synergize with expert knowledge. Specifically, we conduct a decoupled training approach, employing two separate policy networks, RL and expert. During the Monte Carlo Tree Search (MCTS) process, action candidates from the expert policy foster a guided search mechanism, which is especially helpful in the early training stage. This framework alleviates the speed bottleneck typical of physics-based solvers in online decision-making, and also significantly enhances control performance and convergence speed of RL scheduling agents, as validated by substantial improvements in a 126-node real provincial test case.
+
 [Download paper here](https://www.sciencedirect.com/science/article/abs/pii/S0378779624005248)
 
-Recommended citation: Liu, S., Liu, J., Yang, N., Huang, Y., Jiang, Q., & Gao, Y. (2024). Real-time power scheduling through reinforcement learning from demonstrations. Electric Power Systems Research, 235, 110638..
+## Bibtex:
+```
+@article{liu2024real,
+  title={Real-time power scheduling through reinforcement learning from demonstrations},
+  author={Liu, Shaohuai and Liu, Jinbo and Yang, Nan and Huang, Yupeng and Jiang, Qirong and Gao, Yang},
+  journal={Electric Power Systems Research},
+  volume={235},
+  pages={110638},
+  year={2024},
+  publisher={Elsevier}
+}
+```

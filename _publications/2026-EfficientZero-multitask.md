@@ -14,12 +14,12 @@ Developing generalist robots capable of mastering diverse skills remains a centr
 [Website](https://yewr.github.io/ez_m/),
 [Code](http://github.com/liushaohuai5/EfficientZero_Multitask)
 
-BibTex:
-'''
-@article{wang2024efficientzero,
-  title={EfficientZero V2: Mastering Discrete and Continuous Control with Limited Data},
-  author={Wang, Shengjie and Liu, Shaohuai and Ye, Weirui and You, Jiacheng and Gao, Yang},
-  journal={arXiv preprint arXiv:2403.00564},
-  year={2024}
+## BibTex:
+```aiignore
+@article{liu2026scaling,
+  title={Scaling Tasks, Not Samples: Mastering Humanoid Control through Multi-Task Model-Based Reinforcement Learning},
+  author={Liu, Shaohuai and Ye, Weirui and Du, Yilun and Xie, Le},
+  journal={arXiv preprint arXiv:2603.01452},
+  year={2026}
 }
-'''
+```
