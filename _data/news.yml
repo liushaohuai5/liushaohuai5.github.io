@@ -1,8 +1,8 @@
-- date: "2026"
+- date: "09/2026"
   text: '<a href="/publication/NeurIPS2026-IGP/">Iterative Gumbel Planning for Continuous Control</a> accepted to <strong>NeurIPS 2026</strong>, continuing our work on search-based reinforcement learning in the EfficientZero family.'
-- date: "2026"
+- date: "09/2026"
   text: 'Our Amazon internship work, <a href="/publication/NeurIPS2026-APIVIS/">Improving Math Reasoning through Value-Guided Informative Search</a>, accepted to the <strong>NeurIPS 2026 MATH-AI Workshop</strong>.'
 - date: "09/2026"
-  text: 'Completed my <strong>Applied Scientist internship at Amazon</strong> (June–September 2026), working on search-augmented agentic reinforcement learning.'
+  text: 'Completed my <strong>Applied Scientist internship at Amazon</strong> (June–September 2026), working on search-augmented agentic reinforcement learning, mentored by <a href="https://www.linkedin.com/in/yuning-wu/">Yuning Wu</a>.'
 - date: "03/2026"
   text: 'Released <a href="/publication/2026-EfficientZero-Multitask/">EfficientZero-Multitask (EZ-M)</a>, exploring task scaling and shared world models for sample-efficient humanoid control.'

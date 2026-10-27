@@ -18,6 +18,7 @@ Education
 Work experience
 ======
 * **June–September 2026: Applied Scientist Intern, Amazon**
+  * Mentor: [Yuning Wu](https://www.linkedin.com/in/yuning-wu/)
   * Conducted research on search-augmented agentic reinforcement learning for mathematical reasoning.
   * Developed APIVIS, resulting in [Improving Math Reasoning through Value-Guided Informative Search](https://neurips.cc/virtual/2026/168481), accepted to the NeurIPS 2026 MATH-AI Workshop.
 * Spring 2024: Research Assistant (Gap year)

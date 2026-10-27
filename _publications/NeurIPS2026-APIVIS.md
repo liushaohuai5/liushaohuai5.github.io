@@ -2,7 +2,7 @@
 title: "Improving Math Reasoning through Value-Guided Informative Search"
 collection: publications
 permalink: /publication/NeurIPS2026-APIVIS/
-# Workshop presentation date; the acceptance month has not been specified.
+# Workshop presentation date; accepted in September 2026.
 date: 2026-12-13
 venue: "NeurIPS MATH-AI Workshop"
 status: "Accepted"
@@ -17,7 +17,7 @@ share: false
 comments: false
 ---
 
-This work was conducted during my **Applied Scientist internship at Amazon (June–September 2026)**, where I worked on search-augmented agentic reinforcement learning.
+This work on search-augmented agentic reinforcement learning was conducted during my **Applied Scientist internship at Amazon (June–September 2026)** under the mentorship of [Yuning Wu](https://www.linkedin.com/in/yuning-wu/).
 
 Reinforcement learning with verifiable rewards (RLVR) improves mathematical reasoning, but greater search-induced trajectory diversity does not by itself guarantee policy improvement. We introduce **APIVIS**, a training-time framework that adapts finite-budget Gumbel search to chunk-level mathematical reasoning.
 

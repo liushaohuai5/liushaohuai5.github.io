@@ -2,7 +2,7 @@
 title: "Iterative Gumbel Planning for Continuous Control"
 collection: publications
 permalink: /publication/NeurIPS2026-IGP/
-# Conference presentation date; the acceptance month has not been specified.
+# Conference presentation date; accepted in September 2026.
 date: 2026-12-11
 venue: "NeurIPS"
 status: "Accepted"
