@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300" fill="none">
+  <rect width="440" height="300" fill="#F3F7FC"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="30" y="42" fill="#234D78" font-size="13" font-weight="700" letter-spacing="2">ITERATIVE GUMBEL PLANNING</text>
+    <text x="30" y="72" fill="#657286" font-size="13">Align search with the policy</text>
+    <rect x="30" y="103" width="164" height="123" rx="8" fill="white" stroke="#D9E3EF"/>
+    <path d="M48 203H177M48 203V128" stroke="#CBD7E5"/>
+    <rect x="59" y="178" width="16" height="25" rx="3" fill="#BED0E5"/>
+    <rect x="83" y="153" width="16" height="50" rx="3" fill="#96B3D4"/>
+    <rect x="107" y="130" width="16" height="73" rx="3" fill="#234D78"/>
+    <rect x="131" y="162" width="16" height="41" rx="3" fill="#96B3D4"/>
+    <rect x="155" y="185" width="16" height="18" rx="3" fill="#BED0E5"/>
+    <path d="M204 163H234M227 157L234 163L227 169" stroke="#234D78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="246" y="103" width="164" height="123" rx="8" fill="white" stroke="#D9E3EF"/>
+    <path d="M264 203H393M264 203V128" stroke="#CBD7E5"/>
+    <rect x="275" y="193" width="16" height="10" rx="3" fill="#BED0E5"/>
+    <rect x="299" y="170" width="16" height="33" rx="3" fill="#96B3D4"/>
+    <rect x="323" y="125" width="16" height="78" rx="3" fill="#234D78"/>
+    <rect x="347" y="180" width="16" height="23" rx="3" fill="#96B3D4"/>
+    <rect x="371" y="196" width="16" height="7" rx="3" fill="#BED0E5"/>
+    <text x="112" y="252" text-anchor="middle" fill="#657286" font-size="12">Search candidates</text>
+    <text x="328" y="252" text-anchor="middle" fill="#657286" font-size="12">Refined discrete policy</text>
+    <text x="220" y="280" text-anchor="middle" fill="#8291A3" font-size="11">A conceptual view of search and refinement</text>
+  </g>
+</svg>

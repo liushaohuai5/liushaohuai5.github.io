@@ -5,6 +5,9 @@ permalink: /publication/PSCC2024-GridZero-Imitation
 #excerpt: 'Real-time decision-making in power system scheduling is imperative in response to the increasing integration of renewable energy. This paper proposes a novel framework leveraging Reinforcement Learning from Demonstration (RLfD) to address complex unit commitment (UC) and optimal power flow (OPF) challenges, called GridZero-Imitation (GZ-I). Unlike traditional RL approaches that require complex reward function designs and have limited performance insurance, our method employs intuitive rewards and expert demonstrations to regularize the RL training. The demonstrations can be collected from asynchronous reanalysis of an expert solver, enabling RL to synergize with expert knowledge. Specifically, we conduct a decoupled training approach, employing two separate policy networks, RL and expert. During the Monte Carlo Tree Search (MCTS) process, action candidates from the expert policy foster a guided search mechanism, which is especially helpful in the early training stage. This framework alleviates the speed bottleneck typical of physics-based solvers in online decision-making, and also significantly enhances control performance and convergence speed of RL scheduling agents, as validated by substantial improvements in a 126-node real provincial test case.'
 date: 2024-10-01
 venue: 'Electric Power Systems Research'
+authors: "Shaohuai Liu, Jinbo Liu, Nan Yang, Yupeng Huang, Qirong Jiang, Yang Gao"
+summary: "Combining expert demonstrations and reinforcement learning for real-time power system scheduling."
+paperurl: "https://www.sciencedirect.com/science/article/abs/pii/S0378779624005248"
 #paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0378779624005248'
 #citation: 'Liu, S., Liu, J., Yang, N., Huang, Y., Jiang, Q., & Gao, Y. (2024). Real-time power scheduling through reinforcement learning from demonstrations. Electric Power Systems Research, 235, 110638.'
 ---

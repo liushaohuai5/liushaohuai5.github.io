@@ -1,0 +1,25 @@
+{% assign paper = include.paper %}
+<article class="research-card{% if include.selected and paper.thumbnail %} research-card--illustrated{% endif %}">
+  {% if include.selected and paper.thumbnail %}
+  <a class="research-card__image" href="{{ paper.url | relative_url }}" aria-label="Read {{ paper.title | escape }}">
+    <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.thumbnail_alt | escape }}" width="440" height="300" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="research-card__body">
+    <div class="research-card__meta">
+      <span class="venue-badge">{{ paper.venue }} {{ paper.date | date: "%Y" }}</span>
+      {% if paper.award %}<span class="paper-distinction">{{ paper.award }}</span>{% endif %}
+      {% if paper.status %}<span class="paper-status">{{ paper.status }}</span>{% endif %}
+    </div>
+    <h3 class="research-card__title"><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+    {% if paper.authors %}<p class="research-card__authors">{{ paper.authors | escape | replace: 'Shaohuai Liu', '<strong>Shaohuai Liu</strong>' }}</p>{% endif %}
+    {% if paper.summary %}<p class="research-card__summary">{{ paper.summary }}</p>{% endif %}
+    <div class="paper-links" aria-label="Paper resources">
+      {% if paper.paperurl %}<a href="{{ paper.paperurl }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if paper.conferenceurl %}<a href="{{ paper.conferenceurl }}">Conference <span aria-hidden="true">↗</span></a>{% endif %}
+      <a href="{{ paper.url | relative_url }}">Details <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>

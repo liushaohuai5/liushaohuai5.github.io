@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300" fill="none">
+  <rect width="440" height="300" fill="#F6F5FA"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="30" y="42" fill="#61517E" font-size="13" font-weight="700" letter-spacing="2">EFFICIENTZERO-MULTITASK</text>
+    <text x="30" y="72" fill="#657286" font-size="13">Scale tasks. Share a world model.</text>
+    <g fill="white" stroke="#DDD7E8">
+      <rect x="30" y="104" width="91" height="38" rx="6"/>
+      <rect x="30" y="153" width="91" height="38" rx="6"/>
+      <rect x="30" y="202" width="91" height="38" rx="6"/>
+    </g>
+    <g fill="#726585" font-size="12" text-anchor="middle">
+      <text x="75.5" y="128">Task A</text><text x="75.5" y="177">Task B</text><text x="75.5" y="226">Task C</text>
+    </g>
+    <path d="M121 123H145V172H163M121 172H163M121 221H145V172" stroke="#B7AACB" stroke-width="2"/>
+    <rect x="163" y="119" width="136" height="106" rx="9" fill="#61517E"/>
+    <text x="231" y="161" text-anchor="middle" fill="white" font-size="14" font-weight="700">Shared</text>
+    <text x="231" y="184" text-anchor="middle" fill="white" font-size="14" font-weight="700">world model</text>
+    <path d="M299 172H326M319 166L326 172L319 178" stroke="#8A79A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="335" y="141" width="78" height="62" rx="6" fill="white" stroke="#DDD7E8"/>
+    <text x="374" y="167" text-anchor="middle" fill="#61517E" font-size="12" font-weight="700">Plan</text>
+    <text x="374" y="186" text-anchor="middle" fill="#726585" font-size="12">and act</text>
+    <text x="220" y="272" text-anchor="middle" fill="#657286" font-size="12">Multi-task model-based reinforcement learning</text>
+  </g>
+</svg>

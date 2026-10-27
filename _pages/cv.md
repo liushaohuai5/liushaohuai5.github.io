@@ -17,15 +17,15 @@ Education
 
 Work experience
 ======
-* Summer 2022: AI Engineer
-  * JD.com
-  * Search and Recommendation
+* **June–September 2026: Applied Scientist Intern, Amazon**
+  * Conducted research on search-augmented agentic reinforcement learning for mathematical reasoning.
+  * Developed APIVIS, resulting in [Improving Math Reasoning through Value-Guided Informative Search](https://neurips.cc/virtual/2026/168481), accepted to the NeurIPS 2026 MATH-AI Workshop.
 * Spring 2024: Research Assistant (Gap year)
   * Tsinghua University
   * Duties included: Reinforcement learning research
   * Supervisor: Professor Yang Gao
-* Summer 2026: Applied Scientist Intern
-  * Amazon
+* Summer 2022: AI Engineer, JD.com
+  * Search and recommendation
   
 Skills
 ======
@@ -39,9 +39,16 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+{% assign sorted_publications = site.publications | sort: "date" | reverse %}
+<ul class="cv-publications">
+{% for paper in sorted_publications %}
+  <li>
+    <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a><br>
+    {% if paper.authors %}<span class="cv-publications__authors">{{ paper.authors | escape | replace: 'Shaohuai Liu', '<strong>Shaohuai Liu</strong>' }}</span><br>{% endif %}
+    <span class="cv-publications__venue">{{ paper.venue }}, {{ paper.date | date: "%Y" }}{% if paper.status %} · {{ paper.status }}{% endif %}{% if paper.award %} · {{ paper.award }}{% endif %}</span>
+  </li>
+{% endfor %}
+</ul>
   
 Service and leadership
 ======

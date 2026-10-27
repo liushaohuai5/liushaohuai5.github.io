@@ -1,0 +1,256 @@
+/* Shared presentation for the homepage, publication list, and CV. */
+$research-ink: #223247;
+$research-accent: #234d78;
+$research-muted: #657286;
+$research-line: #e4e9ef;
+
+body {
+  color: $research-ink;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: $research-accent; }
+a:visited { color: $research-accent; }
+a:hover { color: #142f4c; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid $research-accent;
+  outline-offset: 4px;
+}
+
+.masthead { border-bottom-color: $research-line; }
+.masthead__inner-wrap { max-width: 1180px; }
+.greedy-nav .visible-links a { color: $research-ink; }
+.greedy-nav .visible-links a::before { background: $research-accent; }
+
+#main {
+  max-width: 1180px;
+  margin: 2.8rem auto 0;
+  padding: 0 2rem;
+}
+
+.page__title {
+  color: #182b40;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin-bottom: 1rem;
+}
+
+.page__content, .archive {
+  font-size: 0.94rem;
+  h2 {
+    margin-top: 2.1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid $research-line;
+    font-size: 1.3rem;
+    letter-spacing: -0.025em;
+  }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
+
+.section-eyebrow {
+  color: $research-muted;
+  font-size: 0.7rem !important;
+  font-weight: 600;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+}
+
+.research-focus {
+  margin: 1.3rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid $research-accent;
+  border-radius: 0 6px 6px 0;
+  background: #f4f7fb;
+  p { margin: 0; line-height: 1.7; }
+  strong { color: $research-accent; }
+}
+
+.news-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0 !important;
+  padding: 0.6rem 0;
+  font-size: 0.86rem !important;
+  line-height: 1.65;
+}
+
+.news-date {
+  color: $research-muted;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.12rem;
+}
+
+.news-text {
+  padding-left: 1rem;
+  border-left: 2px solid $research-line;
+  strong { font-weight: 600; }
+}
+
+.news-archive {
+  margin-top: 0.8rem;
+  summary { cursor: pointer; color: $research-accent; font-size: 0.8rem; }
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid $research-line;
+  h2 { border: 0; padding: 0; margin: 0; }
+  > a { flex-shrink: 0; font-size: 0.74rem; }
+}
+
+.research-card {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid $research-line;
+  &:last-child { border-bottom: 0; }
+  &--illustrated {
+    display: grid;
+    grid-template-columns: 176px minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+  }
+}
+
+.research-card__image {
+  display: block;
+  overflow: hidden;
+  border: 1px solid $research-line;
+  border-radius: 8px;
+  background: #f5f8fc;
+  img { display: block; width: 100%; height: auto; }
+  &:hover img { box-shadow: none !important; }
+}
+
+.research-card__body { min-width: 0; }
+.research-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 0.22rem 0.48rem;
+  border-radius: 4px;
+  color: $research-accent;
+  background: #eef3f9;
+  font-size: 0.64rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.paper-status, .paper-distinction {
+  color: #52695b;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+.paper-distinction { color: #8c6429; }
+
+.research-card .research-card__title {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+  a { color: #203c59; }
+}
+
+.research-card p.research-card__authors {
+  margin: 0 0 0.4rem;
+  color: $research-muted;
+  font-size: 0.71rem;
+  line-height: 1.65;
+  strong { color: #34465a; font-weight: 650; }
+}
+
+.research-card p.research-card__summary {
+  margin: 0 0 0.65rem;
+  font-size: 0.79rem;
+  line-height: 1.65;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  a { display: inline-block; padding: 0.1rem 0; }
+}
+
+.archive .publication-year {
+  margin-top: 1.8rem;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.publication-authors { color: $research-muted; font-size: 0.85rem; }
+.publication-venue { margin: 0 0 1.5rem; }
+.cv-publications {
+  padding-left: 1.15rem;
+  li { padding-left: 0.3rem; margin-bottom: 1.2rem; }
+  > li > a { font-weight: 600; }
+}
+.cv-publications__authors, .cv-publications__venue { color: $research-muted; font-size: 0.8rem; }
+
+.page__footer { background: #f7f9fb; border-top-color: $research-line; }
+
+@media (min-width: 925px) {
+  #main {
+    display: grid;
+    grid-template-columns: 186px minmax(0, 1fr);
+    gap: 0 64px;
+  }
+  #main > .sidebar, #main > .page, #main > .archive {
+    float: none;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #main > .splash { grid-column: 1 / -1; }
+  #main > .page__related { grid-column: 2; }
+  .author__avatar img { max-width: 150px; padding: 0; border: 0; }
+  .author__name { font-size: 1.05rem; letter-spacing: -0.025em; }
+  .author__bio { color: $research-muted; }
+  .author__urls { font-size: 0.85rem; }
+}
+
+@media (max-width: 924px) {
+  #main { margin-top: 1.5rem; padding: 0 1.25rem; }
+  #main > .sidebar { margin-bottom: 1.5rem; }
+  .page__title { font-size: 1.7rem; }
+}
+
+@media (max-width: 600px) {
+  .research-card--illustrated { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+  .research-card__image { max-width: 260px; }
+  .news-item { grid-template-columns: 59px minmax(0, 1fr); gap: 0.5rem; }
+  .news-text { padding-left: 0.75rem; }
+  .section-heading { flex-wrap: wrap; gap: 0.35rem; }
+  .research-focus { padding: 0.9rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #main, .sidebar { animation: none; transition: none; }
+}

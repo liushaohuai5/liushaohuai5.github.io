@@ -5,12 +5,17 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% if site.author.googlescholar %}
+You can also find my work on [Google Scholar]({{ site.author.googlescholar }}).
 {% endif %}
 
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
+{% assign sorted_publications = site.publications | sort: "date" | reverse %}
+{% assign publication_year = "" %}
+{% for paper in sorted_publications %}
+  {% assign current_year = paper.date | date: "%Y" %}
+  {% if current_year != publication_year %}
+<h2 class="publication-year">{{ current_year }}</h2>
+    {% assign publication_year = current_year %}
+  {% endif %}
+  {% include research-card.html paper=paper %}
 {% endfor %}
