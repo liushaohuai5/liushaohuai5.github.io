@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Iterative Gumbel Planning for Continuous Control. Explore Gaussian and factorized-policy rollouts on DMControl and HumanoidBench.">
+  <meta name="theme-color" content="#11766e">
+  <title>EZ-IGP · Iterative Gumbel Planning for Continuous Control</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="nav" aria-label="Main navigation"><a class="brand" href="#">EZ<span>IGP</span></a><div><a href="#rollouts">Rollouts</a><a href="#method">Method</a><a href="#results">Results</a></div></nav>
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Continuous control · Model-based reinforcement learning</p>
+      <h1>Iterative Gumbel Planning<br><span>for Continuous Control</span></h1>
+      <p class="authors"><span><a href="https://liushaohuai5.github.io/">Shaohuai Liu</a><sup>1,*</sup></span><span>Weirui Ye<sup>2,*</sup></span><span>Yilun Du<sup>3</sup></span><span>Le Xie<sup>3,†</sup></span></p>
+      <p class="affiliations"><span><sup>1</sup> Texas A&amp;M University</span><span><sup>2</sup> CSAIL, MIT</span><span><sup>3</sup> Harvard University</span></p>
+      <p class="roles">* Equal contribution &nbsp; · &nbsp; † Corresponding author</p>
+      <div class="links"><button disabled>arXiv <small>Coming soon</small></button><button disabled>Code <small>Coming soon</small></button><a class="primary" href="#rollouts">Explore the rollouts <span aria-hidden="true">↓</span></a></div>
+      <p class="lead">A factorized categorical policy meets iterative search.<br>Explore how the learned behavior compares with a Gaussian policy.</p>
+    </header>
+
+    <section id="rollouts" class="section rollouts" aria-labelledby="rollout-title">
+      <div class="section-heading"><div><p class="eyebrow">See the policies in motion</p><h2 id="rollout-title">Same task. Different policies.</h2></div><div class="mode-switch" role="group" aria-label="Display mode"><button id="compare-mode" aria-pressed="true">Task comparison</button><button id="wall-mode" aria-pressed="false">Video wall</button></div></div>
+      <div class="toolbar"><label>Benchmark<select id="benchmark"><option value="all">All benchmarks</option><option value="dmc">DMControl</option><option value="hb">HumanoidBench</option></select></label><label id="task-label">Task<select id="task"></select></label><div class="playback"><button id="play">Play pair</button><button id="restart">Restart</button><label>Speed<select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div></div>
+      <div id="comparison"><div class="task-heading"><h3 id="task-title"></h3><span id="task-position"></span></div><div class="pair"><figure class="video-frame gaussian"><figcaption><span class="dot"></span>Gaussian policy</figcaption><video id="gaussian" muted playsinline controls preload="metadata"></video></figure><figure class="video-frame igp"><figcaption><span class="dot"></span>Factorized policy + IGP <span class="ours">Ours</span></figcaption><video id="igp" muted playsinline controls preload="metadata"></video></figure></div><div class="task-navigation"><button id="previous">← Previous task</button><span>10 tasks · 20 original rollouts</span><button id="next">Next task →</button></div></div>
+      <div id="wall" class="wall" hidden></div>
+      <p id="video-status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">Selected qualitative rollouts, not statistical comparisons. Paired playback starts the clips together; initial states and trajectory durations are not guaranteed to match. Videos are silent. In wall mode, only visible clips play, and off-screen clips pause.</p>
+      <noscript><p>Enable JavaScript for task selection and the video wall. You can also <a href="assets/videos/dmc/gaussian/dog_stand_epi_0_1000.mp4">watch Gaussian dog stand</a> and <a href="assets/videos/dmc/igp/dog_stand_epi_0_1000.mp4">factorized-policy dog stand</a> directly.</p></noscript>
+    </section>
+
+    <section class="section prose" id="abstract"><p class="eyebrow">The idea</p><h2>Align the policy with search.</h2><p>Search-based planning evaluates a finite set of action candidates. Continuous-control policies, however, commonly represent these decisions with a Gaussian. We study how winner-action distillation can exert variance-expanding gradient pressure under local assumptions, and observe elevated policy variance over the evaluated training horizon.</p><p><strong>Iterative Gumbel Planning (IGP)</strong> instead uses a per-dimension factorized categorical policy. Gumbel-based candidate sampling and repeated proposal refinement enable search over high-dimensional continuous actions without enumerating the full joint action grid. Implemented on EfficientZero-Multitask, the resulting <strong>EZ-IGP</strong> achieves strong aggregate performance on DMControl and HumanoidBench, with lower temporal action variation in the evaluated comparisons.</p></section>
+
+    <section class="section" id="method"><p class="eyebrow">How it works</p><h2>Propose. Search. Refine.</h2><p class="section-intro">A compact, factorized action distribution supports multiple rounds of planning at the same state.</p><figure class="paper-figure"><a href="assets/images/method.png" target="_blank" rel="noopener"><img src="assets/images/method.png" alt="Method overview from the paper: factorized policy, candidate search and iterative refinement." loading="lazy"></a><figcaption>Method overview from the paper. Click the figure to view it at full resolution.</figcaption></figure><ol class="method-steps"><li><span>01</span><h3>Propose candidates</h3><p>Sample bins without replacement within each action dimension, then align ranks to form joint actions. This is a structured approximation, not exact sampling from the full joint grid.</p></li><li><span>02</span><h3>Evaluate with search</h3><p>Use the learned world model and value estimates to evaluate joint candidates through Gumbel search.</p></li><li><span>03</span><h3>Refine and repeat</h3><p>Update the proposal, retain the previous round’s best action, and sample the remaining candidates from the refined distribution.</p></li></ol></section>
+
+    <section class="section" id="results"><p class="eyebrow">Empirical results</p><h2>From locomotion to whole-body control.</h2><p class="section-intro">EZ-IGP is evaluated on seven DMC-Hard tasks and fourteen HB-Hard tasks. The figure below reproduces the paper’s aggregate comparison.</p><figure class="paper-figure results-figure"><a href="assets/images/fig1_overall_igp_bar.png" target="_blank" rel="noopener"><img src="assets/images/fig1_overall_igp_bar.png" alt="Paper Figure 1: normalized returns for DMC-Hard at 1M steps and HumanoidBench-Hard at 0.5M steps." loading="lazy"></a><figcaption>Normalized aggregate scores. DMC-Hard: 1M environment steps; HB-Hard: 0.5M environment steps, as labeled in Figure 1. These are distinct from the training-progress-matched ablation results.</figcaption></figure><p class="note">Results depend on the task and search budget. The comparisons do not imply a universal advantage across all individual tasks or isolate every architectural and optimization factor.</p></section>
+
+    <section class="section prose citation" id="citation"><p class="eyebrow">Reference</p><h2>Citation</h2><p>The arXiv link and complete citation will be added when available.</p><blockquote>Shaohuai Liu, Weirui Ye, Yilun Du, and Le Xie.<br><strong>Iterative Gumbel Planning for Continuous Control.</strong></blockquote></section>
+  </main>
+  <footer><div class="footer-inner"><p class="brand">EZ<span>IGP</span></p><p>We thank Jeffrey Polasek and the Texas A&amp;M University Department of Electrical and Computer Engineering IT team for their support of the Olympus computing cluster.</p><p>Funding is supported in part by Harvard Salata Institute for Climate and Sustainability.</p><p class="disclaimer">The views expressed in this paper are those of the authors and do not reflect the views of PJM Interconnection, L.L.C. or its Board of Managers, of which Le Xie is a member.</p><a href="#">Back to top ↑</a></div></footer>
+</body>
+</html>
