@@ -6,7 +6,8 @@ permalink: /publication/NeurIPS2026-IGP/
 date: 2026-12-11
 venue: "NeurIPS"
 status: "Accepted"
-authors: "Shaohuai Liu, Weirui Ye, Yilun Du, Le Xie"
+authors: "Shaohuai Liu, Weirui Ye, Yilun Du†, Le Xie†"
+author_note: "† Co-corresponding authors."
 summary: "Aligning search and policy representations for continuous control, addressing variance inflation through iterative Gumbel planning with factorized categorical policies."
 paperurl: "https://arxiv.org/abs/2611.02236"
 projecturl: "https://liushaohuai5.github.io/ez_igp/"
@@ -18,6 +19,8 @@ thumbnail_alt: "Iterative search refines a factorized categorical policy over co
 share: false
 comments: false
 ---
+
+**Co-corresponding authors: Yilun Du and Le Xie.**
 
 This work continues the EfficientZero line of research on sample-efficient, search-based reinforcement learning. It studies a structural mismatch in continuous control: search evaluates a finite set of candidate actions and returns a discrete distribution, while a Gaussian policy represents a continuous density.
 

@@ -13,6 +13,7 @@
     </div>
     <h3 class="research-card__title"><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
     {% if paper.authors %}<p class="research-card__authors">{{ paper.authors | escape | replace: 'Shaohuai Liu', '<strong>Shaohuai Liu</strong>' }}</p>{% endif %}
+    {% if paper.author_note %}<p class="research-card__authors">{{ paper.author_note | escape }}</p>{% endif %}
     {% if paper.summary %}<p class="research-card__summary">{{ paper.summary }}</p>{% endif %}
     <div class="paper-links" aria-label="Paper resources">
       {% if paper.paperurl %}<a href="{{ paper.paperurl }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}

@@ -46,6 +46,7 @@ Publications
   <li>
     <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a><br>
     {% if paper.authors %}<span class="cv-publications__authors">{{ paper.authors | escape | replace: 'Shaohuai Liu', '<strong>Shaohuai Liu</strong>' }}</span><br>{% endif %}
+    {% if paper.author_note %}<span class="cv-publications__authors">{{ paper.author_note | escape }}</span><br>{% endif %}
     <span class="cv-publications__venue">{{ paper.venue }}, {{ paper.date | date: "%Y" }}{% if paper.status %} · {{ paper.status }}{% endif %}{% if paper.award %} · {{ paper.award }}{% endif %}</span>
   </li>
 {% endfor %}
