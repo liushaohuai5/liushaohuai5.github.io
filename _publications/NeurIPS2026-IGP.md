@@ -8,7 +8,7 @@ venue: "NeurIPS"
 status: "Accepted"
 authors: "Shaohuai Liu, Weirui Ye, Yilun Du, Le Xie"
 summary: "Aligning search and policy representations for continuous control, addressing variance inflation through iterative Gumbel planning with factorized categorical policies."
-paperurl: "https://openreview.net/forum?id=gxzYBTetUi"
+paperurl: "https://arxiv.org/abs/2611.02236"
 projecturl: "https://liushaohuai5.github.io/ez_igp/"
 codeurl: "https://github.com/liushaohuai5/EZ-IGP"
 conferenceurl: "https://neurips.cc/virtual/2026/loc/atlanta/poster/150597"
@@ -25,4 +25,4 @@ We show that distilling search outputs into a Gaussian policy induces a non-vani
 
 IGP combines Gumbel Top-K sampling without replacement with multiple rounds of search and refinement at the same state. Experiments on DMControl and HumanoidBench demonstrate improved sample efficiency and lower temporal action variance at evaluation.
 
-[Project Page](https://liushaohuai5.github.io/ez_igp/) · [Code](https://github.com/liushaohuai5/EZ-IGP) · [Paper / OpenReview](https://openreview.net/forum?id=gxzYBTetUi) · [NeurIPS conference page](https://neurips.cc/virtual/2026/loc/atlanta/poster/150597)
+[Project Page](https://liushaohuai5.github.io/ez_igp/) · [Code](https://github.com/liushaohuai5/EZ-IGP) · [arXiv](https://arxiv.org/abs/2611.02236) · [OpenReview](https://openreview.net/forum?id=gxzYBTetUi) · [NeurIPS conference page](https://neurips.cc/virtual/2026/loc/atlanta/poster/150597)
